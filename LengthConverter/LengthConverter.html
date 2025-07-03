@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Template File Using Bootstrap</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+
+<script type="text/javascript">
+/* 
+Create a function that converts the inputted length from 
+inch to centimeter(cm) and vice versa: convertLength.
+The function should first display a prompt asking the user to select the length unit 
+to convert to inch/cm.
+Then the function should display another prompt asking the user to input the length to be converted to 
+inch/cm.
+The value entered should be validated to ensure it is a number.
+Then, the appropriate formula should be applied to the value to convert the
+length to the selected length unit. 
+Finally, an alert should be displayed indicating the
+length that they entered, and the converted length.
+The function should be called when the appropriate button(i.e., Convert)  is pressed.
+*/
+function convertLength()
+  {
+    var inch;
+    var cm;
+    var length_unit = prompt("Please enter a length unit(1:To convert into inch, 2:To convert into centimeters)");
+    var length = prompt("Please enter a length value to ve converted to inch/centimeter");
+
+    switch(length_unit) {
+      case '1': // cm to inch
+        var converted = length/2.54;
+        var message = length + " cm converted to " + converted + " inches";
+        alert(message);
+        break;
+      case '2': // inch to cm
+        var converted = length*2.54;
+        var message = length + " inches converted to " + converted + " cm";
+        alert(message);
+        break;
+      default:
+        alert("Enter number 1: to convert from cm to inch or 2: to convert from inch to cm");
+    }
+  }
+</script>
+</head>
+<body>
+
+<div class="jumbotron container-fluid pb-0">
+  <h1 class=" text-center"><b>Computer Engineering Computing Science - Web Programming</b></h1>
+  <div class="row justify-content-end">     
+	 <nav class="navbar bg-light">
+	  <ul class="nav flex-row">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Lab 2</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Multimedia.html">Lab 3</a>
+        </li>               
+      </ul>
+	</nav>	
+  </div>  
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+	
+    <div class="col-md-9">
+      <h3>Length Converter Using Bootstrap Template</h3> 
+      <h3>  ------------------------------------------------------</h3>	  
+        <h4>This program converts from inch to centimeter and vice versa</h4>
+        <h4>  -------------------------------------------------------------</h4>
+		      <h5>Please click Convert button to perform length conversion</h5>
+          <h5>  -------------------------------------------------------------</h5>
+		   
+		  <table>      
+        <tr>
+			    <td><input onclick="convertLength()" name="btnConvert" id="btnConvert" value="Convert!" type="button"></td>				
+		    </tr>       
+      </table>
+     </div>    
+    </div>    
+  </div>
+</div>
+
+<div class="jumbotron text-center fixed-bottom" style="margin-bottom:0">
+  <p>Footer</p>
+  <p>041044570</p>
+   <p>Yassine</p>
+	<p>Amraoui</p>	
+</div>
+
+</body>
+</html>

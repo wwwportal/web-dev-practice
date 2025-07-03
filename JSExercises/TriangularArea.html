@@ -1,0 +1,79 @@
+<!--
+CET - CS Academic Level 3
+Student Name: Yassine Amraoui
+Student Number: 041044570
+Course: CST8238 - Web Programming
+Description: Assignment 1
+Professor: Dhaval Vasveliya
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Triangle Area Calculator</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body>
+
+<div class="jumbotron container-fluid pb-0">
+  <h1 class=" text-center"><b>Computer Engineering Computing Science - Web Programming</b></h1>
+  <div class="row justify-content-end">     
+	 <nav class="navbar bg-light">
+	  <ul class="nav flex-row">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Index</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="AreaCalculator.html">AreaCalculator</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Fibonacci.html">Fibonacci</a>
+        </li>   
+        <li class="nav-item">
+          <a class="nav-link" href="Factorial.html">Factorial</a>
+        </li>          
+      </ul>
+	</nav>	
+  </div>  
+</div>
+
+<div class="container-fluid" ng-app="triangleCalculator" ng-controller="ctrl">
+    <div class="row">
+        <div class="col-md-9">
+        <h2>This program calculates the area of a triangle</h2>
+        <h4>Please enter the height and base of the triangle</h4>
+        Height: <input name="height" type="number" ng-model="height" ng-change="updateArea()"><br>
+        Base: <input name="base" type="number" ng-model="base" ng-change="updateArea()"><br>
+        <br>
+        <h5>Area of the triangle: {{area}}</h5>
+        </div>
+    </div>
+</div>
+
+<script>
+var app = angular.module('triangleCalculator', []);
+app.controller('ctrl', function($scope, $window) {
+    $scope.height = 0;
+    $scope.base = 0;
+    $scope.area = 0;
+    $scope.updateArea = function() {
+        $scope.area = ($scope.height * $scope.base) / 2;
+    };
+
+});
+</script>
+
+<div class="jumbotron text-center fixed-bottom" style="margin-bottom:0">
+  <p>Footer</p>
+  <p>041044570</p>
+  <p>Yassine</p>
+	<p>Amraoui</p>	
+</div>
+
+</body>
+</html>

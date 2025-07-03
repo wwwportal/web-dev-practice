@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h3>1. Define HTML.</h3>
+            <p>HTML (Hypertext Markup Language) is a markup language. It is used to annotate a document with information about the content of the document.</p>
+        <h3>2. Define Client-Server model of communications.</h3>
+            <p>The Client-Server model technically synonymous with the Web. It defines a system with a minimum of two agents. The client makes requests and receives responses from the server in the form of response codes.</p>
+        <h3>3. Write down the name of different types of servers.</h3>
+            <p> 
+                - Web Servers <br> 
+                - Application Servers <br>
+                - Database Servers <br>
+                - Mail Servers <br>
+                - Media Servers <br>
+                - Authentication Servers
+            </p>
+        <h3>4. Define a Web Server.</h3>
+            <p>A Web Server is a computer that reponds to HTTP requests.</p>
+        <h3>5. Define Data Centers.</h3>
+            <p></p>
+        <h3>6. Why do we need a Uniform Resource Locator (URL)?</h3>
+            <p>
+                The URL allows clients to request particular resources from the server.
+            </p>
+        <h3>7. Give an example of Uniform Resource Locator (URL) and specify all components of an URL.</h3>
+            <p>
+                URL: https://www.mysite.com/index.php?page=17#article <br>
+                PROTOCOL: http <br>
+                DOMAIN: www.mysite.com <br>
+                PATH: index.php <br>
+                QUERY STRING: page=17 <br>
+                FRAGMENT: article
+            </p>
+        <h3>8. What is the difference between a static and a dynamic web site? </h3>
+            <p>
+                A static web site displays some HTML and perhaps some additional content such as images, but does not run programs on the server.
+                Naturally, dynamic web sites are the opposite. They contain practically all the elements of a static website, but they also run programs on the server. These programs can interact with other resources on the server or services on other computers.
+            </p>
+        <h3>9. Why do we need Domain Name System (DNS)?</h3>
+            <p>
+                We need DNS to make the web user-friendly. Specifically, we use DNS to convert IP addresses to domain names written in english (or other natural languages), which can be easily understood.
+            </p>
+        <h3>10. Describe in detail the process of DNS address resolution?</h3>
+            <p>
+                1. Client makes request for domain <br>
+                2. Client computer checks local DNS Cache <br>
+                3. If requested domain is not in the local cache, the computer requests the IP address for the domain from its primary DNS server <br>
+                4. If the primary DNS Server doesn’t have a record for the requested domain in its cache, it sends out the request to the Root Name Server <br>
+                5. The Root Name Server returns the address of the relevant Top-Level Domain (TLD) Server. <br>
+                6. The DNS Server requests the DNS record information from the provided TLD Server. <br>
+                7. The TLD Name Server returns with the IP addresses of the Authoritative DNS Servers for the requested domain. <br>
+                8. The DNS Server requests the IP address for the originally requested domain from one of the site’s Authoritative DNS Servers. <br>
+                9. The DNS Server returns the IP address of the requested domain. <br>
+                10. The client computer can finally make its request of the domain.
+            </p>
+        <h3>11. Give some examples of generic top-Level domains (gTLD).</h3>
+            <p>
+                Urestricted: .com, .net, .org, .info <br>
+                Sponsored: .gov, .mil, .edu, ...
+
+            </p>
+        <h3>12. Give some examples of country code top-Level domains (ccTLD).</h3>
+            <p>
+                - co.uk <br>
+                - .ca <br>
+                - .tv
+            </p>
+        <h3>13. How can you pass a user’s information from the client to the web server?</h3>
+            <p>
+                - GET <br>
+                - POST 
+            </p>
+        <h3>14. What is the function (purpose) of Hypertext Transfer Protocol (HTTP)?</h3>
+            <p>
+                HTTP establishes a TCP connection on port 80. The server waits for the requests and then responds with a: <br>
+                - Headers <br>
+                - Response code <br>
+                - optional message
+            </p>
+        <h3>15. Describe how a single web page is displayed on a web browser.</h3>
+            <p> 
+                - The browser makes a GET request for each resource in the HTML <br>
+                - When all resources have arrived, the browser lays our and displays the page to the user.
+            </p>
+        <h3>16. Give some examples of HTTP request methods.</h3>
+            <p> 
+                - GET <br>
+                - POST <br>
+                - HEAD
+            </p>
+        <h3>17. Give an example of web server software, database software and scripting software.</h3>
+            <p>
+                1. Web server software: Apache <br>
+                2. Database: MySQL <br>
+                3. Scripting language: PHP
+            </p>
+        <h3>18. What are the four key components of a web software stack.</h3>
+            <p> 
+                1. Operating System <br>
+                2. Web Server Software <br>
+                3. Database <br>
+                4. Scripting Language
+            </p>
+        <h3>19. Define HTTP response codes. Write down the meaning of the following response codes.</h3>
+            <p>
+                200: OK: successful request. <br>
+                301: Moved Permanently: requested sources has permanently moved. <br>
+                304: Not Modified: resource on server is the same version as the one in the client cache. <br>
+                401: Unauthorized: requested resource is protected and requires credentials to be accessed. <br>
+                404: Not Found: requested resource was not found. <br>
+                414: Request URI too long: too much data is trying to be submitted via URL <br>
+                500: Internal Server Error: server has encountered an error.
+            </p>
+    </body>
+</html>

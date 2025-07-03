@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Multiplication Table</title>
+
+
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">    
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+
+
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h1><b>Computer Engineering Technology - Web Programming</b></h1>
+</div>
+
+<div class="container-fluid">
+  <div class="row">  
+    <div class="row">  
+    <div class="col-md-3">     
+	 <nav class="navbar bg-light">
+	  <ul class="nav flex-column">
+		<li class="nav-item">
+          <a class="nav-link" href="SquareTable.html">Square Table</a>
+        </li>
+	    
+      </ul>
+	 </nav>	
+   </div>   
+   
+    <div class="col-md-9" >  
+		<h3>This program generates the Square table</h3>
+		<h4>Please enter an integer number</h4>    
+		   
+		<div ng-app="myApp" ng-controller="myCtrl">  
+
+		 <input type="number" ng-model="tableSize" ng-change="implementTable()"><br>		
+		<br>
+		 <h5>Square table of number {{tableSize}} : <br>{{squareTableValue}} </h5>
+	</div>	
+
+	<script>
+	
+	/* Multiplication program */
+
+/* Constants */
+
+const TABLE_SIZE = 10;
+const FIELD_WIDTH = 4;
+
+/*
+ * Draws a multiplication table on the console.
+ */
+
+function squareTable(tableSize) {
+
+var checkedItems = [];
+
+   for (let i = 1; i <= tableSize; i++) {
+      let line = "";
+      line=i*i;
+      
+	  checkedItems.push(line);
+	  
+   }
+   return checkedItems;
+}
+	
+		var app = angular.module('myApp', []);
+		
+		app.controller('myCtrl', function($scope) {
+		$scope.tableSize = 0;
+		$scope.squareTableValue = 0;
+		
+			$scope.implementTable = function () {				
+			$scope.squareTableValue =squareTable($scope.tableSize);			
+			}
+		});
+	</script>
+	
+    </div>    
+  </div>
+</div>
+
+<div class="jumbotron text-center" style="margin-bottom:0">
+  <p>Footer</p>
+  <p>[1111111]</p>
+   <p>Rejaul</p>
+	<p>Chowdhury</p>	
+</div>
+
+</body>
+</html>

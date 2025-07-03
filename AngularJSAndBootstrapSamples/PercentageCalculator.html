@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Update Percentage</title>
+
+
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">    
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+
+
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h1><b>Computer Engineering Technology - Web Programming</b></h1>
+</div>
+
+<div class="container-fluid">
+  
+   
+    <div class="col-md-12" >  
+	<div ng-app="myApp" ng-controller="myCtrl">	
+		
+	   <label>Count <input name="count" ng-model="count" 
+					  ng-change="updatePercentage()"
+					  type="number" min="0" /></label><br/>
+	   <label>Total <input name="total" ng-model="total"
+					  ng-change="updatePercentage()"
+					  type="number" min="1" required/></label><br/>
+	   <hr/>
+		Percentage: {{percentage}}
+		
+	</div>	
+
+	<script>
+	var app = angular.module('myApp', []);
+	
+	app.controller('myCtrl', function($scope,  $window) {		
+	   $scope.count = 0;
+	   $scope.total = 1;
+
+	   $scope.updatePercentage = function () {
+		  $scope.percentage = $window.Math.round((100 * $scope.count) / $scope.total);
+	   };
+	});
+	</script>
+	
+    </div>    
+  </div>
+</div>
+
+<div class="jumbotron text-center" style="margin-bottom:0">
+  <p>Footer</p>
+  <p>[1111111]</p>
+   <p>Rejaul</p>
+	<p>Chowdhury</p>	
+</div>
+
+</body>
+</html>

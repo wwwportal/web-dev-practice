@@ -1,0 +1,144 @@
+<html>
+
+<head><!-- linking css page to html page -->	
+	<link href="styles.css" rel="stylesheet">
+</head> 
+
+<body>
+
+		<!-- HEADER -->
+			<div id="header">
+				<div id="banner">
+					<h1><b>Computer Engineering Computing Science - Web Programming</b></h1>
+				</div>
+				<!-- Menu -->
+				<div id="menu">
+					<h2><a href="index.html">Index</a>  <a href="Multimedia.html">Multimedia</a></h2>
+				</div>
+			</div>
+	
+		<!-- CONTENT -->
+			<div id="content">
+				<table>
+					<thead>
+						<th>CSS Style Rule</th>
+						<th>Syntax</th>
+						<th id="thead">Example</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Class Selector</td>
+							<td><code>
+								.first { <br>
+									font-style: italic; <br>
+									color: brown; <br>
+								}
+							</code></td>
+							<td>
+								<div class="first">
+									<h3>Reviews</h3>
+									<p>By Rejaul on Jan 15 2021</p>
+								</div>
+								<p>I love Central Park.</p>
+							</td>
+						</tr>
+						<tr>
+							<td>Id Selector</td>
+							<td><code>
+								#latestComment { <br>
+									font-style: italic; <br>
+									color: blue; <br>
+								}
+							</code></td>
+							<td>
+								<h3>Reviews</h3>
+								<div id="latestComment">
+									<p>By Rejaul on Jan 15 2021</p>
+									<p>I love Central Park.</p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>Attribute Selector</td>
+							<td><code>
+								[title] { <br>
+									cursor: help; <br>
+									padding-bottom: 3px; <br>
+									border-bottom: 2px dotted blue; <br>
+									text-decoration: none; <br>
+								}
+							</code></td>
+							<td>
+								<img src="./media/images/canadaFlag.png" width="50" title="Flag of Canada"></img>
+								<h2> <a href="https://en.wikipedia.org/wiki/Canada" title="Name of the largest country in North America">Canada</a></h2>
+								<p>Canada is a North American country consisting of...</p>
+								<div class="container">
+									<img src="./media/images/West_Block_Temp_House_of_Commons,_2022.jpg" title="The House of Commons in its temporary location, the West Block.">
+									<img src="./media/images/Beaver_sculpture,_Centre_Block.jpg" title="The mother beaver on the Canadian parliament's Peace Tower. The five flowers on the shield each represent an ethnicity—Tudor rose: English; Fleur de lis: French; thistle: Scottish; shamrock: Irish; and leek: Welsh.">
+									<img src="./media/images/The_Jack_Pine,_by_Tom_Thomson.jpg" title="The Jack Pine by Tom Thomson. Oil on canvas, 1916, in the collection of the National Gallery of Canada.">
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>Pseudo Selector</td>
+							<td><code>
+								a:link { <br>
+									text-decoration: underline; <br>
+									color: blue; <br>
+									} <br>
+								a:visited { <br>
+									text-decoration: underline; <br>
+									color: purple; <br>
+									} <br>
+								a:hover { <br>
+									text-decoration: underline; <br>
+									font-weight: bold; <br>
+									}
+							</code></td>
+							<td>
+								<p>To know about links visit the <a href="https://www.w3.org">W3C</a> website.</p>
+								<ol>
+									<li><a href="https://www.google.com">Google</a></li>
+									<li><a href="https://www.yahoo.com">Yahoo</a></li>
+									<li><a href="https://www.amazon.com">Amazon</a></li>
+								</ol>
+							</td>
+						</tr>
+						<tr>
+							<td>Contextual Selector</td>
+							<td><code>
+								ul a:link { <br>
+									background-color: yellow; <br>
+									} <br>
+									<br>
+								#main div p:first-child { <br>
+									color: green; <br>
+									}
+							</code></td>
+							<td id="main">
+									<ul>
+										<li><a href="https://www.google.com">Google</a></li>
+										<li><a href="https://www.yahoo.com">Yahoo</a></li>
+										<li><a href="https://www.amazon.com">Amazon</a></li>
+									</ul>
+								<div>
+										<p>I love Central Park</p>
+										<p>I love National Park</p>
+								</div>
+							</td>
+						</tr>
+
+					</tbody>
+				</table>
+			</div>
+		
+		<!-- FOOTER -->
+			<div id="footer">			
+				<p>041044570</p>
+				<p>Yassine Amraoui</p>
+				<p>amra0011@algonquinlive.com</p>		
+			</div>
+
+</body>
+
+</html>
