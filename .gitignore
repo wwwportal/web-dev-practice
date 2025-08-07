@@ -1,0 +1,2 @@
+# Local DB config (contains credentials)
+MySQLCrud/MySQLConnectionInfo.php
